@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapSoft.Core", "CapSoft.Core\CapSoft.Core.csproj", "{ACB381C5-764E-4C83-B780-C45648F7C809}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5ED1814-D98D-4FE5-8746-71BDC497BD59}"
+	ProjectSection(SolutionItems) = preProject
+		..\Users\srinivask\Downloads\nuget-tfs-ignore\.tfignore = ..\Users\srinivask\Downloads\nuget-tfs-ignore\.tfignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0AE167F4-4521-48C6-9CB0-52075E6A1C2A}"
+	ProjectSection(SolutionItems) = preProject
+		..\Users\srinivask\Downloads\nuget-tfs-ignore\.nuget\NuGet.Config = ..\Users\srinivask\Downloads\nuget-tfs-ignore\.nuget\NuGet.Config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapSoft.API", "CapSoft.API\CapSoft.API.csproj", "{AEACB2EC-E4E9-4783-9C4B-5791859FB808}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapSoft.Web", "CapSoft.Web\CapSoft.Web.csproj", "{91D90AE0-FAD1-4EE5-A659-B51E29267008}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACB381C5-764E-4C83-B780-C45648F7C809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB381C5-764E-4C83-B780-C45648F7C809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB381C5-764E-4C83-B780-C45648F7C809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB381C5-764E-4C83-B780-C45648F7C809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEACB2EC-E4E9-4783-9C4B-5791859FB808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEACB2EC-E4E9-4783-9C4B-5791859FB808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEACB2EC-E4E9-4783-9C4B-5791859FB808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEACB2EC-E4E9-4783-9C4B-5791859FB808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91D90AE0-FAD1-4EE5-A659-B51E29267008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91D90AE0-FAD1-4EE5-A659-B51E29267008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91D90AE0-FAD1-4EE5-A659-B51E29267008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91D90AE0-FAD1-4EE5-A659-B51E29267008}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0AE167F4-4521-48C6-9CB0-52075E6A1C2A} = {E5ED1814-D98D-4FE5-8746-71BDC497BD59}
+	EndGlobalSection
+EndGlobal

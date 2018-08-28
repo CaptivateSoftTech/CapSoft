@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Captivate Softech Demo</title>
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/images/ico/favicon.ico" type="image/x-icon">
+    <!-- Start Global Mandatory Style    -->
+    <!-- jquery-ui css -->
+    <link href="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Pace css -->
+    <link href="assets/plugins/pace/flash.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Pe-icon -->
+    <link href="assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" />
+    <!-- Themify icons -->
+    <link href="assets/themify-icons/themify-icons.css" rel="stylesheet" type="text/css" />
+    <!-- End Global Mandatory Style    -->    
+    <!-- Start Theme Layout Style -->
+    <!-- Theme style -->
+    <link href="assets/dist/css/cap_style.min.css" rel="stylesheet" type="text/css" />
+    <!-- End Theme Layout Style -->
+    <style>
+        input.ng-invalid, textarea.ng-invalid  {
+            border: 1px solid red;
+        }
+        input.ng-dirty  {
+            border: 1px solid red !important;
+        }
+        
+
+        input.ng-untouched,textarea.ng-untouched {
+        border: 1px solid #ccc;
+        }
+            input.ng-invalid + span, textarea.ng-invalid + span {
+            color:red;
+            }
+            input.ng-dirty + span {
+            color:red;
+            }
+        input.ng-valid,textarea.ng-valid {
+            border: 1px solid lightgreen;
+        }
+    </style>
+</head>
+<body class="fixed hold-transition sidebar-mini" ng-app="">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <header class="main-header">
+            <a href="index.html" class="logo">
+                <!-- Logo -->
+                <span class="logo-mini">
+                    <img src="assets/dist/img/mini-logo.png" alt="">
+                </span>
+                <span class="logo-lg">
+                    <img src="assets/dist/img/logo.png" alt="">
+                </span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top ">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <!-- Sidebar toggle button-->
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="fa fa-bars"></span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">                        
+                        <!-- user -->
+                        <li class="dropdown dropdown-user admin-user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-user-circle-o"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="fa fa-users"></i> User Profile</a></li>
+                                <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                                <li><a href="login.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- =============================================== -->
+        <!-- Left side column. contains the sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="image pull-left">
+                        <img src="assets/dist/img/avatar5.png" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <h4>Welcome</h4>
+                        <p>Mr. Captivate</p>
+                    </div>
+                </div>
+
+                <!-- sidebar menu -->
+                <ul class="sidebar-menu">
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-user"></i><span>User</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="add-patient.html">Add User</a></li>
+                            <li><a href="index.html">User list</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div> <!-- /.sidebar -->
+        </aside>
+        <!-- =============================================== -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="header-icon">
+                    <i class="pe-7s-note2"></i>
+                </div>
+                <div class="header-title">
+                    <h1>User</h1>
+                    <small>Add User</small>
+                    <ol class="breadcrumb hidden-xs">
+                        <li><a href="index.html"><i class="pe-7s-home"></i> Home</a></li>
+                        <li class="active">User</li>
+                    </ol>
+                </div>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <!-- Form controls -->
+                    <div class="col-sm-12">
+                        <div class="panel panel-bd ">
+                            <div class="panel-heading">
+                                <div class="btn-group">
+                                    <a class="btn btn-primary" href="index.html">
+                                        <i class="fa fa-list"></i>  User List
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <form  name="myForm" novalidate>
+                                    <div class="row">
+                                        <div class="col-sm-6 form-group">
+                                            <label>User Name</label>
+                                            <input class="form-control" placeholder="Enter username" name="userName" ng-model="userName" required type="text">
+                                            <span ng-show="myForm.userName.$touched && myForm.userName.$invalid">Username is required.</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 form-group">
+                                            <label>First Name</label>
+                                            <input class="form-control" placeholder="Enter firstname" name="fstname" ng-model="fstname" type="text" required>
+                                            <span ng-show="myForm.fstname.$touched && myForm.fstname.$invalid">First Name is required.</span>
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <label>Last Name</label>
+                                            <input class="form-control" placeholder="Enter Lastname" name="lstname" ng-model="lstname" type="text" required>
+                                            <span ng-show="myForm.lstname.$touched && myForm.lstname.$invalid">Last Name is required.</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 form-group">
+                                            <label>Sex</label><br>
+                                            <label class="radio-inline">
+                                                <input name="sex" value="1" checked="checked" type="radio">Male
+                                            </label>
+                                            <label class="radio-inline"><input name="sex" value="0" type="radio">Female</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 form-group">
+                                            <label>Date of Birth</label>
+                                            <input class="form-control" placeholder="Date of Birth" type="date" name="dob" ng-model="dob" required>
+                                            <span ng-show="myForm.dob.$touched && myForm.dob.$invalid">Date of Birth is required.</span>
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <label>Email</label>
+                                            <input class="form-control" placeholder="Enter Email" name="email" ng-model="email" required type="email">
+                                            <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                                                <span ng-show="myForm.email.$error.required">Email is required.</span>
+                                                <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 form-group">
+                                            <label>Corresponding Address</label>
+                                            <textarea class="form-control" rows="3" name="cadd" ng-model="cadd" required></textarea>
+                                            <span ng-show="myForm.cadd.$touched && myForm.cadd.$invalid">Corresponding Address is required.</span>
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <label>Permanent Address</label>
+                                            <textarea class="form-control" rows="3" name="padd" ng-model="padd" required></textarea>
+                                            <span ng-show="myForm.padd.$touched && myForm.padd.$invalid">Permanent Address is required.</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 form-group">
+                                            <label>Mobile</label>
+                                            <input class="form-control" placeholder="Enter Mobile" name="mobile" ng-model="mobile" required type="number" maxlength="10">
+                                            <span ng-show="myForm.mobile.$touched && myForm.mobile.$invalid">Mobile Number is required.</span>
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <label>Picture upload</label>
+                                            <input type="file" name="picture" ng-model="picture" required>
+                                            <span ng-show="myForm.picture.$touched && myForm.picture.$invalid">Upload Picture is required.</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6 form-check">
+                                            <label>Status</label><br>
+                                            <label class="radio-inline"><input name="status" value="1" checked="checked" type="radio">Active</label>
+                                            <label class="radio-inline">
+                                                <input name="status" value="0" type="radio">Inctive
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 reset-button">
+                                        <input class="btn btn-success" type="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section> <!-- /.content -->
+        </div> <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs"> <b>Version</b> 1.0</div>
+            <strong>Copyright &copy; 2017-2018 <a href="#">Captivate Softech</a>.</strong> All rights reserved.
+        </footer>
+    </div> <!-- ./wrapper -->
+    <!-- Start Core Plugins
+    -->
+    <!-- jQuery -->
+    <script src="assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <!-- jquery-ui -->
+    <script src="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+    <!-- Bootstrap -->
+    <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Angular js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</body>
+</html>

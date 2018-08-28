@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Captivate Softech Demo</title>
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/images/ico/favicon.ico" type="image/x-icon">
+    <!-- Start Global Mandatory Style    -->
+    <!-- jquery-ui css -->
+    <link href="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Pace css -->
+    <link href="assets/plugins/pace/flash.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Pe-icon -->
+    <link href="assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css" />
+    <!-- Themify icons -->
+    <link href="assets/themify-icons/themify-icons.css" rel="stylesheet" type="text/css" />
+    <!-- End Global Mandatory Style    -->   
+    <!-- Start Theme Layout Style    -->
+    <!-- Theme style -->
+    <link href="assets/dist/css/cap_style.min.css" rel="stylesheet" type="text/css" />
+    <!-- End Theme Layout Style    -->
+</head>
+<body class="fixed hold-transition sidebar-mini" ng-app="myApp" ng-controller="myCtrl">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <header class="main-header">
+            <a href="index.html" class="logo">
+                <!-- Logo -->
+                <span class="logo-mini">
+                    <img src="assets/dist/img/mini-logo.png" alt="">
+                </span>
+                <span class="logo-lg">
+                    <img src="assets/dist/img/logo.png" alt="">
+                </span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top ">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <!-- Sidebar toggle button-->
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="fa fa-bars"></span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">                        
+                        <!-- user -->
+                        <li class="dropdown dropdown-user admin-user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-user-circle-o"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="fa fa-users"></i> User Profile</a></li>
+                                <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                                <li><a href="login.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- =============================================== -->
+        <!-- Left side column. contains the sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="image pull-left">
+                        <img src="assets/dist/img/avatar5.png" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <h4>Welcome</h4>
+                        <p>Mr. Captivate</p>
+                    </div>
+                </div>
+
+                <!-- sidebar menu -->
+                <ul class="sidebar-menu">                   
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-user"></i><span>User</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="add-patient.html">Add User</a></li>
+                            <li><a href="index.html">User list</a></li>
+                        </ul>
+                    </li>                   
+                </ul>
+            </div> <!-- /.sidebar -->
+        </aside>
+        <!-- =============================================== -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="header-icon">
+                    <i class="pe-7s-box1"></i>
+                </div>
+                <div class="header-title">
+                    <h1>User</h1>
+                    <small>User list</small>
+                    <ol class="breadcrumb hidden-xs">
+                        <li><a href="index.html"><i class="pe-7s-home"></i> Home</a></li>
+                        <li class="active">User</li>
+                    </ol>
+                </div>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-bd ">
+                            <div class="panel-heading">
+                                <div class="btn-group">
+                                    <a class="btn btn-success" href="add-patient.html"> <i class="fa fa-plus"></i>  Add User</a>
+                                </div>
+
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="panel-header">
+                                        <div class="col-sm-4">
+                                            <div class="dataTables_length" id="example_length">
+                                                <label>
+                                                    Display <select name="example_length">
+                                                        <option value="10">10</option>
+                                                        <option value="25">25</option>
+                                                        <option value="50">50</option>
+                                                        <option value="100">100</option>
+                                                    </select> records per page
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="dataTables_length">
+                                                <div class="input-group custom-search-form">
+                                                    <input type="search" class="form-control" placeholder="search..">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-primary" type="button">
+                                                            <span class="glyphicon glyphicon-search"></span>
+                                                        </button>
+                                                    </span>
+                                                </div><!-- /input-group -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover">
+                                        <thead class="success">
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Picture</th>
+                                                <th>User Name</th>
+                                                <th>Patient Name</th>
+                                                <th>DOB</th>
+                                                <th>Mobile No</th>
+                                                <th>Address</th>
+                                                <th>Sex</th>
+                                                <th>Email</th>
+                                                <th>Status</th>
+                                                <th>Modified Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="x in data">
+                                                <td>{{x.Id}}</td>
+                                                <td>
+                                                    <img src="assets/dist/img/m1.png" class="img-circle" alt="Sample Image" height="50" width="50">
+                                                </td>
+                                                <td>{{x.UserName}}</td>
+                                                <td>{{x.FirstName}} {{ x.LastName}}</td>
+                                                <td>{{x.DOB | date :  "M/d/yy"}}</td>
+                                                <td>{{x.Mobile}}</td>
+                                                <td>{{x.AddressLine1}}</td>
+                                                <td>{{x.Gender}}</td>
+                                                <td>{{x.Email}}</td>
+                                                <td>{{x.IsActive}}</td>
+                                                <td>{{x.ModifiedDate | date :  "M/d/yy"}}</td>
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div>                                
+                                <div class="page-nation text-right">
+                                    <ul class="pagination pagination-large">
+                                        <li class="disabled"><span>«</span></li>
+                                        <li class="active"><span>1</span></li>
+                                        <li><a href="#">2</a></li>
+                                        <li class="disabled"><span>...</span></li>
+                                        <li>
+                                        <li><a rel="next" href="#">Next</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- /.content -->
+        </div> <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs"> <b>Version</b> 1.0</div>
+            <strong>Copyright &copy; 2017-2018 <a href="#">Captivate Softech</a>.</strong> All rights reserved.
+        </footer>
+    </div> <!-- ./wrapper -->
+    <!-- ./wrapper -->
+    <!-- Start Core Plugins
+    -->
+    <!-- jQuery -->
+    <script src="assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <!-- jquery-ui -->
+    <script src="assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+    <!-- Bootstrap -->
+    <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- Angular js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope, $http) {
+            debugger;
+            $http.get("/api/users")
+            .then(function (response) {
+                $scope.data = response.data;
+            });
+        });
+    </script>
+</body>
+</html>
